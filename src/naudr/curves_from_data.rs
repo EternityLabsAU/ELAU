@@ -27,7 +27,12 @@ impl INode3D for CurvesFromData {
 #[godot_api]
 impl CurvesFromData {
     #[func]
-    fn get_size_of_data(&mut self) -> i16 {
-        self.data.len() as i16
+    fn get_debug_data(&mut self) -> Vec<i32> {
+        let mut debug_data = Vec::new();
+        debug_data.push(2);
+        debug_data.push(0);
+        debug_data.push(2);
+        debug_data.push(4);
+        debug_data
     }
 }
